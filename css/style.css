@@ -11,11 +11,8 @@
     --lpink: #FFD4C1;
     --pink: #F28482;
     --yellow: #F6BD60;
-    --charcoa: 
-    --sp-1: 8px;
-    --sp-2: 16px;
-    --sp-3: 24px;
-    --sp-4: 32px;
+    --charcoal: #1a1a1a; 
+      
 }
 
 * { 
@@ -88,35 +85,18 @@ h7 {
 }
 
 
-.col-1 {grid-column: span 1; }
-.col-2 {grid-column: span 2; }
-.col-3 {grid-column: span 3; }
-.col-4 {grid-column: span 4; }
-.col-5 {grid-column: span 5; }
-.col-6 {grid-column: span 6; }
-.col-7 {grid-column: span 7; }
-.col-8 {grid-column: span 8; }
-.col-9 {grid-column: span 9; }
-.col-10 {grid-column: span 10; }
-.col-11 {grid-column: span 11; }
-.col-12 {grid-column: span 12; }
-
 /* buttons */
 
-.primaryButton {
-    width: 240;
-    height: 87;
+.primary-button {
     font-size: 30px;
-    /* border: 1px solid #444444; */
     background-color: var(--teal);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
    color:white;
-   padding: 24px 43px;
    border-radius: 12px;
   text-align: center;
 }
 
-.secondaryButton {
+.secondary-button {
     width: 240;
     height: 87;
     font-size: 30px;
@@ -124,7 +104,6 @@ h7 {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
    color: var(--teal);
-   padding: 24px 43px;
    border-radius: 12px;
   text-align: center;
 }
@@ -154,12 +133,8 @@ nav {
 .nav-item {
     text-decoration: none;
     padding: 16px;
-    color: #424242;
-    /* position: -webkit-sticky;
-    position: sticky;
-    top: 0; */
+    color: var(--charcoal);
 }
-
 
 /* lines */
 .ln {
@@ -178,138 +153,120 @@ nav {
 
 
 /* hero section - Home Page*/
-.Home-HeroGrid {
+.main-grid {
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: auto;
-    /* height: auto; */
     padding: 5% 10%;
-    background-color: whitesmoke;
-
 }
 
-.headertitle {
-    grid-area: 1 / 1 / span 1 / span 8;
+.hero-section {
+    background-color: whitesmoke;
+}
+
+.header-title {
+    grid-area: 1 / 1 / span 1 / span 12;
     padding: 0% 0% 5% 0;
     
 }
 
-.headersubtitle {
+.header-subtitle {
     grid-area: 2 / 1 / span 1 / span 6;
     padding: 0% 0% 5% 0%;
 }
 
-.headerbodytext {
+.header-body-text {
     grid-area: 3 / 1 / span 1 / span 5; 
     padding: 0% 0% 10% 0%;
 }
 
-.headerbutton {
-    grid-area: 4 / 1 / span 1 / span 2     
+#hero-button {
+    padding: 24px 43px;  
+    grid-area: 4 / 1 / span 1 / span 2;
+       
 }
 
-
-.headerLinkedin {
-    grid-area: 4 / 3 / 4/ 4;
-    padding: 10% 0 0 50%;
-
+#li-button {
+    grid-area: 4 / 3 / span 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.headerBehance {
+#be-button {
+    grid-area: 4 / 4 / span 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-Behance {
     grid-area: 4 / 4 /4/ 4;
     padding: 10% 0 0 10%;
 }
 
 
 /* selected work */
-
-
-.gridselectedwork {
-    display:grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: auto;
-    padding: 5% 10%;
-}
-.selectedworkTitle{
-    grid-column: span 12;
-    padding: 0% 0% 10% 0%;
+.selected-work {
+    padding: 5% 10% 0 10%;
 }
 
-/* CARD1  */
-
-.Card1 {
-    grid-column: span 12;
-    /* grid-area: 2 / 1 / span 3 / span 12; */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 0 0 10% 0;
+.case-study-right div {
+    background-image: url("../images/SAASredesignthumbnail.jpg");
     border-radius: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    grid-area: 1 / 7 / span 4 / span 6;
 }
-.Card-img-1 {
-    /* grid-column: span 6; */
-    grid-area: 2 / 1 / span 2 / span 6;
-    border-radius: 12px; 
-    height: 474px;
-    max-width: 720px;
-    background-color: #bdbdbd;
-    background-image: url("");
-    width: 100%;
+
+
+.case-study-right h5 {
+    grid-area: 1 / 1 / span 1 / span 5;
 }
-.Card1-text {
-    grid-area: 2 / 8 / span 4 / span 3;
-    padding: 2px 16px;
+.case-study-right h4 {
+    grid-area: 2 / 1 / span 1 / span 5;
 }
-.Card1-projectType {
-    /* grid-area: 2 / 8 / span 1 / span 2; */
+.case-study-right p {
+    grid-area: 3 / 1 / span 1 / span 5;
+}
+.case-study-right button {
+    grid-area: 4 / 1 / span 1 / span 2;
 }
 
 
 
-/* Card2 */
-/* .Card2 {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 20px;
+.case-study-left div {
+    background-image: url("../images/SAASredesignthumbnail.jpg");
     border-radius: 12px;
-} */
-
-/* .Card2img {
-    display:grid;
-    width: 840px;
-    border-radius: 12px;
-    float: right; */
-    /* grid-area: 3 / 6 / 3 / 12; */
-/* 
-} */
-
-/* .Card2container {
-    padding: 2px 16px;
-    float: left;
-    width: 460px; */
-
-    /* grid-area: 3 / 1 / 3 / 5; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    grid-area: 1 / 1 / span 4 / span 6;
 }
 
-/* Card3 */
-/* .Card3 {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 20px;
-    border-radius: 12px;
-} */
-
-/* .Card3img {
-    display:grid;
-    width: 840px;
-    border-radius: 12px;
-    float: left; */
-    /* grid-area: 3 / 6 / 3 / 12; */
-
+.case-study-left h5 {
+    grid-area: 1 / 8 / span 1 / span 4;
+}
+.case-study-left h4 {
+    grid-area: 2 / 8 / span 1 / span 4;
+}
+.case-study-left p {
+    grid-area: 3 / 8 / span 1 / span 4;
+}
+.case-study-left button {
+    grid-area: 4 / 8 / span 1 / span 2;
 }
 
-/* .Card3container {
-    padding: 2px 16px;
-    float: right;
-    width: 600px; */
-    /* grid-area: 3 / 1 / 3 / 5;
-} */
+
+
+
+
+
+
+
 
 
 /* Contact Me */
@@ -501,12 +458,4 @@ nav {
 
 .randomFacts-list1 {
 grid-column: span 6;
-
-    /* grid-area: 6 / 1 / span 2 / span / 6;
-} */
-
-.randomFacts-list2 {
-    grid-column: span 6;
-    grid-row: auto;
-    /* grid-area: 6 / 6 / span 2 / span / 12; */
 }
