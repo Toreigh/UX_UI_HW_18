@@ -4,7 +4,6 @@
     src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;700&display=swap');
 }
 
-
 :root {
     --teal: #2D6161;
     --blue: #9DB6B5;
@@ -13,7 +12,10 @@
     --yellow: #F6BD60;
     --charcoal: #1a1a1a; 
     --darkgrey: #8F8F8F;
-      
+}
+
+html {
+    font-size: 16px;
 }
 
 * { 
@@ -28,67 +30,79 @@ html,
 body {
     height:100%;
     width:100%;
-    font-size: 20px;
+    
     
 }
 
 /* Typography */
 H1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 80px;
+    font-size: 4.5rem;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 1.2em;
 
 }
 
 H2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 70px;
+    font-size: 4rem;
     font-weight: 600;
 }
 
 H3 {
     font-family:'Roboto', sans-serif;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight:700;
     text-transform: uppercase;
+
 }
 
 H4 {
     font-family:'Roboto', sans-serif;
-    font-size: 45px;
+    font-size: 2.5rem;
     font-weight:700;
 }
 
 H5 {
     font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight:500;
+    text-transform: uppercase;
+}
+
+H5-light {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight:300;
     text-transform: uppercase;
 }
 
 H6 {
     font-family:'Roboto', sans-serif;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight:400;
 }
 
 h7 {
     font-family:'Roboto', sans-serif;
-    font-size: 60px;
+    font-size: 3.5rem;
     font-weight: 300;
 }
 
 p {
     font-family:'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 1.25rem;
     font-weight: 400;
+    line-height: 1.5;
+
 }
 
 p-light {
     font-family:'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 1.25rem;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 
@@ -97,24 +111,25 @@ p-light {
 /* buttons */
 
 .primary-button {
-    font-size: 30px;
+    font-size: 1.25rem;
     background-color: var(--teal);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
- color:white;
+    color:white;
    border-radius: 12px;
-   padding: 10% 0%;
+   padding: 2% 2%;
   text-align: center;
   border: none;
   
 }
 
 .secondary-button {
-    font-size: 30px;
+    font-size: 1.25rem;
     border: 1px solid var(--teal);
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
    color: var(--teal);
    border-radius: 12px;
+   padding: 2% 2%;
   text-align: center;
 }
 
@@ -122,8 +137,7 @@ p-light {
 /* Navigation */
 header {
     background: white;
-   
-    
+     
 }
 
 nav {
@@ -144,18 +158,18 @@ nav {
     color: var(--charcoal);
 }
 
+.logo-small{
+    display: none;
+}
+
+#burger-menu {
+    display: none;
+}
 /* lines */
 .ln {
     border: 2px solid var(--pink);
-    
-}
-.noln-top {
     border-top:none;
-}
-.noln-left {
     border-left: none;
-}
-.noln-right {
     border-right: none;
 }
 
@@ -168,13 +182,23 @@ nav {
     padding: 5% 10%;
 }
 
+.main-grid-border {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+    margin: 5% 10%;
+    padding: 2%;
+    border-radius: 12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .hero-section {
     background-color: whitesmoke;
 }
 
 .header-title {
     grid-area: 1 / 1 / span 1 / span 12;
-    padding: 0% 0% 5% 0;
+    padding: 0% 0% 3% 0;
     
 }
 
@@ -199,6 +223,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 3rem;
 }
 
 #be-button {
@@ -206,6 +231,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 3rem;
 }
 
 .header-Behance {
@@ -226,8 +252,8 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     min-height: 450px;
+    height: 30vh;
     grid-area: 1 / 7 / span 4 / span 6;
 }
 
@@ -254,8 +280,8 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     min-height: 450px;
+    height: 30vh;
     grid-area: 1 / 1 / span 4 / span 6;
 }
 
@@ -281,8 +307,8 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     min-height: 450px;
+    height: 30vh;
     grid-area: 1 / 7 / span 4 / span 6;
 }
 .case-study-Story-Dogs h5 {
@@ -316,22 +342,23 @@ nav {
 
 .contact-me button {
     grid-area: 5 / 1 / span 2 / span 2;
+    padding: 10% 10%;
 }
    
 
 
-
+/* Footer */
 .footer{
     background-color:var(--teal);
     padding: 2% 10%;
     color: white;
 }
 
-.footer h4 {
+.footer h5 {
     grid-area: 1 / 1 / span 1 / span 4; 
     color: white;
 }
-.footer p-light {
+.footer h5-light {
     grid-area: 2 / 1 / span 1 / span 4;
     color: white;
     
@@ -340,7 +367,7 @@ nav {
 .footer p {
     grid-area: 3 / 1 / span 1 / span 3;
     color: white;
-    padding: 20% 0;
+    padding: 10% 0;
 }
 
 .footer-Linkedin {
@@ -349,6 +376,7 @@ nav {
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 2rem;
 }
 
 .footer-Behance {
@@ -357,12 +385,13 @@ nav {
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 2rem;
 }
 
 .footer ul {
     list-style: none;
     line-height: 3;
-    font-size: 30px;
+    
     grid-area: 2 / 9 / span 4 / span 2;
 }
 
@@ -370,6 +399,437 @@ nav {
     text-decoration: none;
     color: white;
     
+}
+
+@media only screen and (min-width: 1224px) and (max-width: 1524px){
+    .header-subtitle {
+        grid-area: 2 / 1 / span 1 / span 8;
+    }
+
+    .headerbodytext {
+        grid-area: 3 / 1 / span 1 /span 7;
+    }
+
+    #hero-button {
+        grid-area: 4 / 1 / span 1 / span 3;
+           
+    }
+    
+    #li-button {
+        grid-area: 4 / 4 / span 1 / span 1;
+        
+    }
+    
+    #be-button {
+        grid-area: 4 / 5 / span 1 / span 1;
+    }
+
+    .contact-me h7 {
+        grid-area: 2 / 1 / span 3 / span 10;
+
+    }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width: 1224px) {
+
+    H1 {
+       font-size: 3.5rem; 
+
+    }
+
+    H2 {
+        font-size: 3rem;
+    }
+
+    H3 {
+        font-size: 2rem;
+    }
+
+    H4 {
+        font-size: 2rem;
+    }
+
+    H5 {
+        font-size: 1.5rem;
+    }
+
+    H5-light {
+        font-size: 1.4rem;
+    }
+
+    H6 {
+
+    }
+
+    H7 {
+        font-size: 2rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    .logo-small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+    }
+
+    .main-grid-border {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+
+    }
+
+    .header-subtitle {
+        grid-area: 2 / 1 / span 1 / span 8;
+        line-height: 1.2em;
+        
+    }
+
+    .header-body-text {
+        grid-area: 3 / 1 / span 1 / span 6;
+        line-height: 1.2em;
+    }
+
+   
+    #li-button {
+        font-size: 2rem;
+    }
+
+    #be-button {
+        font-size: 2rem;
+    }
+
+    /* SAAS Card */
+
+    .case-study-SAAS div {
+        grid-area: 1 / 1 / span 4 / span 8;
+    }
+
+    .case-study-SAAS h5  {
+        grid-area: 7 / 1 / span 1 / span 8;
+        padding: 2% 0 2% 0;
+    }
+
+    .case-study-SAAS h5 {
+        grid-area: 7 / 1 / span 1 / span 8;
+        padding: 2% 0 2% 0;
+    }
+
+    .case-study-SAAS h4 {
+        grid-area: 8 / 1 / span 1 / span 8;
+        padding: 0 0 2% 0;
+    }
+
+    .case-study-SAAS p  {
+        grid-area: 9 / 1 / span 1 / span 8;
+        padding: 0 0 5% 0;
+    }
+    .case-study-SAAS button  {
+        grid-area: 10 / 1 / span 1 / span 2;      
+        }   
+
+    /* SeedShare Card */
+    .case-study-left div {
+        grid-area: 1 / 1 / span 4 / span 8;
+    }
+
+     .case-study-left h5 {
+        grid-area: 7 / 1 / span 1 / span 8;
+        padding: 2% 0 2% 0;
+    }
+
+     .case-study-left h5 {
+        grid-area: 7 / 1 / span 1 / span 8;
+        padding: 2% 0 2% 0;
+    }
+
+    .case-study-left h4 {
+        grid-area: 8 / 1 / span 1 / span 8;
+        padding: 0 0 2% 0;
+    }
+
+    .case-study-left p {
+        grid-area: 9 / 1 / span 1 / span 8;
+        padding: 0 0 5% 0;
+    }
+   .case-study-left button {
+        grid-area: 10 / 1 / span 1 / span 2;
+        
+    }
+   
+        /* StoryDogs Card */
+    .case-study-Story-Dogs div{
+        grid-area: 1 / 1 / span 4 / span 8;
+    }
+
+    .case-study-Story-Dogs h5 {
+        grid-area: 7 / 1 / span 1 / span 8;
+        padding: 2% 0 2% 0;
+    }
+     .case-study-Story-Dogs h5 {
+        grid-area: 7 / 1 / span 1 / span 8;
+        padding: 2% 0 2% 0;
+    }
+     .case-study-Story-Dogs h4 {
+        grid-area: 8 / 1 / span 1 / span 8;
+        padding: 0 0 2% 0;
+    }
+    .case-study-Story-Dogs p{
+        grid-area: 9 / 1 / span 1 / span 8;
+        padding: 0 0 5% 0;
+    }
+    .case-study-Story-Dogs button  {
+        grid-area: 10 / 1 / span 1 / span 2;
+        
+    }
+
+}
+
+@media only screen and (max-width: 767px) and (min-device-width:320px) {
+    H1 {
+        font-size: 2.25rem; 
+ 
+     }
+ 
+     H2 {
+         font-size: 1.75rem;
+     }
+ 
+     H3 {
+         font-size: 1.45rem;
+     }
+ 
+     H4 {
+         font-size: 1.3rem;
+     }
+ 
+     H5 {
+         font-size: 1.15rem;
+     }
+ 
+     H5-light {
+         font-size: 1.15rem;
+     }
+ 
+     H6 {
+ 
+     }
+ 
+     H7 {
+         font-size: 1.5rem;
+     }
+
+     p {
+        font-size: 1rem;
+     }
+
+     p-light {
+        font-size: 1rem;
+     }
+     
+
+    .primary-button  .secondary-button{
+        font-size: 1rem;
+    
+    }
+
+     nav{
+        padding: 2% 5% 2% 5%;
+     }
+
+     .nav-item {
+         display: none;
+     }
+ 
+     #logo {
+         display: none;
+     }
+ 
+     .logo-small {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+ 
+     #burger-menu {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+ 
+
+
+     .main-grid {
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+         padding: 5% 5%;
+     }
+ 
+     .main-grid-border {
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+         margin: 5% 5%;
+ 
+     }
+
+     .header-title {
+        grid-area: 1 / 1 / span 1 / span 4;
+        
+     }
+ 
+     .header-subtitle {
+         grid-area: 2 / 1 / span 1 / span 4;
+         line-height: 1.2em;
+         
+     }
+ 
+     .header-body-text {
+         grid-area: 3 / 1 / span 1 / span 4;
+         line-height: 1.2em;
+     }
+ 
+    #hero-button {
+        padding: 10% 5%;  
+    }
+     #li-button {
+        font-size: 2rem;
+    }
+
+    #be-button {
+        font-size: 2rem;
+    }
+
+ 
+     /* SAAS Card */
+ 
+     .case-study-SAAS div {
+         grid-area: 1 / 1 / span 4 / span 4;
+         min-height: 200px;
+        height: 30vh;
+     }
+ 
+     .case-study-SAAS h5  {
+         grid-area: 7 / 1 / span 1 / span 4;
+         padding: 2% 0 2% 0;
+     }
+ 
+     .case-study-SAAS h5 {
+         grid-area: 7 / 1 / span 1 / span 4;
+         padding: 2% 0 2% 0;
+     }
+ 
+     .case-study-SAAS h4 {
+         grid-area: 8 / 1 / span 1 / span 4;
+         padding: 0 0 2% 0;
+     }
+ 
+     .case-study-SAAS p  {
+         grid-area: 9 / 1 / span 1 / span 4;
+         padding: 0 0 5% 0;
+     }
+     .case-study-SAAS button  {
+         grid-area: 10 / 1 / span 1 / span 4; 
+         padding: 5% 2%;  
+         }   
+ 
+     /* SeedShare Card */
+     .case-study-left div {
+         grid-area: 1 / 1 / span 4 / span 4;
+         min-height: 200px;
+        height: 30vh;
+     }
+ 
+      .case-study-left h5 {
+         grid-area: 7 / 1 / span 1 / span 4;
+         padding: 2% 0 2% 0;
+     }
+ 
+      .case-study-left h5 {
+         grid-area: 7 / 1 / span 1 / span 4;
+         padding: 2% 0 2% 0;
+     }
+ 
+     .case-study-left h4 {
+         grid-area: 8 / 1 / span 1 / span 4;
+         padding: 0 0 2% 0;
+     }
+ 
+     .case-study-left p {
+         grid-area: 9 / 1 / span 1 / span 4;
+         padding: 0 0 5% 0;
+     }
+    .case-study-left button {
+         grid-area: 10 / 1 / span 1 / span 4;
+         padding: 5% 2%;  
+     }
+    
+         /* StoryDogs Card */
+     .case-study-Story-Dogs div{
+         grid-area: 1 / 1 / span 4 / span 4;
+         min-height: 200px;
+        height: 30vh;
+     }
+ 
+     .case-study-Story-Dogs h5 {
+         grid-area: 7 / 1 / span 1 / span 4;
+         padding: 2% 0 2% 0;
+     }
+      .case-study-Story-Dogs h5 {
+         grid-area: 7 / 1 / span 1 / span 4;
+         padding: 2% 0 2% 0;
+     }
+      .case-study-Story-Dogs h4 {
+         grid-area: 8 / 1 / span 1 / span 4;
+         padding: 0 0 2% 0;
+     }
+     .case-study-Story-Dogs p{
+         grid-area: 9 / 1 / span 1 / span 4;
+         padding: 0 0 5% 0;
+     }
+     .case-study-Story-Dogs button  {
+         grid-area: 10 / 1 / span 1 / span 4;
+         padding: 5% 2%;  
+     }
+ 
+ /*footer  */
+ .footer p {
+    grid-area: 3 / 1 / span 1 / span 3;
+    padding: 5% 0;
+ }
+
+.footer-Linkedin {
+     font-size: 2rem;
+     grid-area: 8 / 1 / span 1 / span 1;
+     padding: 5% 0%;
+ }
+
+.footer-Behance {
+    font-size: 2rem;
+    grid-area: 8 / 2 / span 1 / span 1;
+    padding: 5% 0%;
+ }
+
+ .footer ul {
+  
+    grid-area: 4 / 1 / span 4 / span 2;
+}
 }
 
 

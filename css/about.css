@@ -5,6 +5,7 @@
 }
 
 
+
 :root {
     --teal: #2D6161;
     --blue: #9DB6B5;
@@ -13,7 +14,10 @@
     --yellow: #F6BD60;
     --charcoal: #1a1a1a; 
     --darkgrey: #8F8F8F;
-      
+}
+
+html {
+    font-size: 16px;
 }
 
 * { 
@@ -28,14 +32,14 @@ html,
 body {
     height:100%;
     width:100%;
-    font-size: 20px;
+    
     
 }
 
 /* Typography */
 H1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 80px;
+    font-size: 4.5rem;
     font-weight: 700;
     text-transform: uppercase;
 
@@ -43,52 +47,62 @@ H1 {
 
 H2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 70px;
+    font-size: 4rem;
     font-weight: 600;
 }
 
 H3 {
     font-family:'Roboto', sans-serif;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight:700;
     text-transform: uppercase;
 }
 
 H4 {
     font-family:'Roboto', sans-serif;
-    font-size: 45px;
+    font-size: 2.5rem;
     font-weight:700;
 }
 
 H5 {
     font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight:500;
+    text-transform: uppercase;
+}
+
+H5-light {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight:300;
     text-transform: uppercase;
 }
 
 H6 {
     font-family:'Roboto', sans-serif;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight:400;
 }
 
 h7 {
     font-family:'Roboto', sans-serif;
-    font-size: 60px;
+    font-size: 3.5rem;
     font-weight: 300;
 }
 
 p {
     font-family:'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 1.25rem;
     font-weight: 400;
+    line-height: 1.5;
+
 }
 
 p-light {
     font-family:'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 1.25rem;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 
@@ -97,25 +111,25 @@ p-light {
 /* buttons */
 
 .primary-button {
-    font-size: 30px;
+    font-size: 1.25rem;
     background-color: var(--teal);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
  color:white;
    border-radius: 12px;
-   padding: 10% 0%;
+   padding: 2% 2%;
   text-align: center;
   border: none;
   
 }
 
 .secondary-button {
-    font-size: 30px;
+    font-size: 1.25rem;
     border: 1px solid var(--teal);
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
    color: var(--teal);
    border-radius: 12px;
-   padding: 10% 0%;
+   padding: 2% 2%;
   text-align: center;
 }
 
@@ -123,8 +137,7 @@ p-light {
 /* Navigation */
 header {
     background: white;
-   
-    
+     
 }
 
 nav {
@@ -145,31 +158,50 @@ nav {
     color: var(--charcoal);
 }
 
+.logo-small{
+    display: none;
+}
+
+#burger-menu {
+    display: none;
+}
+
 /* lines */
 .ln {
     border: 2px solid var(--pink);
-    
-}
-.noln-top {
-    border-top:none;
-}
-.noln-left {
+    border-top: none;
+    border-right: none;
     border-left: none;
 }
-.noln-right {
-    border-right: none;
-}
 
+
+
+/* hero section - Home Page*/
 .main-grid {
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: auto;
     padding: 5% 10%;
-}* 
+}
+
+.hero-section {
+    background-color: whitesmoke;
+}
 
 .header-title {
     grid-area: 1 / 1 / span 1 / span 12;
-    padding: 0% 0% 5% 0;
+    padding: 0% 0% 3% 0;
+    
+}
+
+.header-subtitle {
+    grid-area: 2 / 1 / span 1 / span 6;
+    padding: 0% 0% 5% 0%;
+}
+
+.header-body-text {
+    grid-area: 3 / 1 / span 1 / span 5; 
+    padding: 0% 0% 10% 0%;
 }
 
 /* About Section */ *
@@ -262,24 +294,29 @@ nav {
 
 /* Random Facts */
 
-.randomFactsTitle {
+.sub-heading-random {
     
-    grid-area: 1 / 1 / span 1 / span 12;
+    grid-area: 2 / 1 / span 1 / span 12;
+    padding: 0 0 1% 0;
  }
 
- .randomFactsintro {
-     grid-column: span 12;
-     /* grid-area: 2 / 1 / span 1 / span 12; */
-     padding: 0 0 2% 0;
-
+.sub-heading-random2 {
+    
+    grid-area: 3 / 1 / span 1 / span 12;
+    padding: 0 0 1% 0;
  }
- .randomFactsintro2 {
-     grid-column: span 12;
-    /* grid-area: 4 / 1 / span 1 / span 12; */
+
+.list1 {
+    grid-area: 4 / 1 / span 4 / span 6;
+    list-style-position: inside;
+    line-height: 3;
+    list-style-image: url('')
 }
 
-.randomFacts-list1 {
-grid-column: span 6;
+.list2 {
+    grid-area: 4 / 6 / span 4 / span 6;
+    list-style-position: inside;
+    line-height: 3;
 }
 
 
@@ -289,11 +326,11 @@ grid-column: span 6;
     color: white;
 }
 
-.footer h4 {
+.footer h5 {
     grid-area: 1 / 1 / span 1 / span 4; 
     color: white;
 }
-.footer p-light {
+.footer h5-light {
     grid-area: 2 / 1 / span 1 / span 4;
     color: white;
     
@@ -302,7 +339,7 @@ grid-column: span 6;
 .footer p {
     grid-area: 3 / 1 / span 1 / span 3;
     color: white;
-    padding: 20% 0;
+    padding: 10% 0;
 }
 
 .footer-Linkedin {
@@ -324,7 +361,7 @@ grid-column: span 6;
 .footer ul {
     list-style: none;
     line-height: 3;
-    font-size: 30px;
+    
     grid-area: 2 / 9 / span 4 / span 2;
 }
 
@@ -333,4 +370,5 @@ grid-column: span 6;
     color: white;
     
 }
+
 
