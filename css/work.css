@@ -108,8 +108,6 @@ p-light {
 }
 
 
-
-
 /* buttons */
 
 .primary-button {
@@ -154,7 +152,6 @@ p-light {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-/* Navigation */
 header {
     background: white;
      
@@ -198,8 +195,6 @@ nav {
     border-right: none;
 }
 
-
-/* hero section - Home Page*/
 .main-grid {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -239,180 +234,17 @@ nav {
 }
 
 .header-subtitle {
-    grid-area: 2 / 1 / span 1 / span 6;
+    grid-area: 2 / 1 / span 1 / span 12;
     padding: 0% 0% 5% 0%;
 }
 
 .header-body-text {
-    grid-area: 3 / 1 / span 1 / span 5; 
+    grid-area: 3 / 1 / span 1 / span 12; 
     padding: 0% 0% 10% 0%;
 }
 
-/* About Section */ *
+/* Work Hero Section */
 
-
-.about-section {
-    background-color: whitesmoke; 
-}
-
-.About-section H1 {color: var(--pink);}
-
-.sub-heading {
-    grid-area: auto / 1 / span 1 / span 12;
-    margin: 0 0 3% 0;
-}
-
-.about-paragraph {
-    grid-area: auto / 1 / span 4 / span 9;
-    margin: 2% 0 2% 0;
-    line-height: 1.5;
-    }
-
-.about-paragraph p {
-    padding: 0 0 2% 0;
-    }
-
-
-.about-buttons {
-    grid-area: auto / 1 / span 1/ span 6;
-    margin: 5% 0 0 0;
-    }
-.about-buttons button {
-   margin: 0 5% 0 0;
-   
-}
-
-.get-in-touch {
-    grid-area: 7 / 1 / span 1 / span 3;
-   
-}
-
-.resume {
-    grid-area: 7 / 4 / span 1 / span 2;
-} *
-
-
-/* My Skills Section */
-.skill-card-title {
-    padding: 0 0 5% 0;
-}
-
-.skill-card-text {
-    line-height: 1.6;
-
-}
-
-.skill-card-1{
-    grid-area: 2 / 1 / span 5 / span 4;
-    
-}
-
-.skill-card-2{
-    grid-area: 2 / 6 / span 5 / span 3;
-}
-
-.skill-card-3{
-    grid-area: 2 / 10 / span 5 / span 3;
-}
-
-
-
-/* Tools */
-
-.tools-section {
+.work-section {
     background-color: whitesmoke;
 }
-
-.ux-tools {
-    grid-area: 2 / 1 / span 3 / span 4;
-}
-
-.ui-tools{
-    grid-area: 2 / 6 / span 3 / span 4;
-}
-
-.tools-title{ 
-    padding: 0 0 5% 0;
-}
-
-
-/* Random Facts */
-
-.sub-heading-random {
-    
-    grid-area: 2 / 1 / span 1 / span 12;
-    padding: 0 0 1% 0;
- }
-
-.sub-heading-random2 {
-    
-    grid-area: 3 / 1 / span 1 / span 12;
-    padding: 0 0 1% 0;
- }
-
-.list1 {
-    grid-area: 4 / 1 / span 4 / span 5;
-    list-style-position: inside;
-    line-height: 3;
-    list-style-image: url('')
-}
-
-.list2 {
-    grid-area: 5 / 6 / span 4 / span 5;
-    list-style-position: inside;
-    line-height: 3;
-}
-
-
-.footer{
-    background-color:var(--teal);
-    padding: 2% 10%;
-    color: white;
-}
-
-.footer h5 {
-    grid-area: 1 / 1 / span 1 / span 4; 
-    color: white;
-}
-.footer h5-light {
-    grid-area: 2 / 1 / span 1 / span 4;
-    color: white;
-    
-}
-
-.footer p {
-    grid-area: 3 / 1 / span 1 / span 3;
-    color: white;
-    padding: 10% 0;
-}
-
-.footer-Linkedin {
-    grid-area: 4 / 1 / span 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.footer-Behance {
-    grid-area: 4 / 2 / span 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.footer ul {
-    list-style: none;
-    line-height: 3;
-    
-    grid-area: 2 / 9 / span 4 / span 2;
-}
-
-.footer ul li a {
-    text-decoration: none;
-    color: white;
-    
-}
-
-
