@@ -13,38 +13,50 @@
 
 <body>
    <!-- Navigation -->
-    <nav class="ln">
-        <div class="logo-wrapper">
-            <h5-light id="logo"><strong>TOREIGH . TILLER </strong> | UX UI DESIGNER</h5-light>
+   <nav>
+    <div class="brand">
+    <h3>TOREIGH TILLER <span class="light">| UX UI DESIGNER</span></h3>
 
-         <div class="logo-small">
-                <h5-light><strong>T T </strong> | UX UI DESIGNER</h5-light>
-                </div>
+
+ <div class="brand-small">
+    <h3>T T<span class="light"> | UX UI DESIGNER</span></h3>
         </div>
-        <div class="nav-items-wrapper">
-            <a href="index.html" class="nav-item">home</a>
-            <a href="work.html" class="nav-item">work</a>
-            <a href="about.html"  class="nav-item">about</a>
-            <a href="contact.html" class="nav-item">contact</a>
-        </div>  
-        <i class="fa fa-bars" style="font-size:24px" id="burger-menu"></i>    
-    </nav>
- 
- 
-    <!-- Header Section -->
-    <section class= "hero-section main-grid"> 
-        <h1 class="header-title"> HI, I'M TOREIGH TILLER</h1>
+    </div>
 
-        <h3 class="header-subtitle"> UX/UI DESIGNER BASED IN ADELAIDE AUSTRALIA.</h3>
+    <ul class="links">
+        <div class="link">
+            <li><a href="index.html">home</a></li>
+        </div>
+        <div class="link">
+            <li><a href="work.html">work</a></li>
+        </div>
+        <div class="link">
+            <li><a href="about.html">about</a></li>
+        </div>
+        <div class="link">
+            <li><a href="contact.html">contact</a></li>
+        </div>
+    </ul>
 
-        <p class="header-body-text">UX/UI designer with a passion for designing functional, accessible and beautiful products.</p>
+    <i class="fa fa-bars" style="font-size:24px" id="burger-menu"></i>    
+</nav>
 
-        <button class="header-button primary-button" id="hero-button"> Contact Me </button>
-       
-        <i class="fa fa-linkedin header-Linkedin" id="li-button"></i>
-       
-        <i class="fa fa-behance-square header-Behance" id="be-button"></i>
-      
+<!-- MAIN -->
+
+<main>
+
+    <section class="hero-grid">
+        <h1 class="header-title"> Hi, I'm Toreigh Tiller<span class="clr-accent">.</span></h1>
+
+        <h4 class="header-subtitle">UX/UI DESIGNER BASED IN ADELAIDE, AUSTRALIA</h4>
+    
+        <p class="header-body-text">UX/UI designer with a passion for designing <span class="tag fill-p-light">functional</span>, <span class="tag fill-accent">accessible</span> and <span class="tag fill-tertiary">beautiful</span> products.</p>
+
+        <div class="container-contact">
+            <button class="btn-primary btn-lg">Get in touch</button>
+            <div class="icon" id="li-button">in</div>
+            <div class="icon" id="be-button">Be</div>
+        </div>
     </section>
     
     <!-- Selected Work -->
@@ -53,63 +65,104 @@
      <section>
         <h2 class="header-title selected-work">Selected Work</h2>
          
-        <!-- Card1 stard -->
+        <!-- Card1 start -->
     
-        <div class="main-grid-border case-study-SAAS">
-            <div></div>
-            <h5>CASE STUDY</h5>
-            <h4>SA Ambulance Website Redesign</h4>
-            <p>3 week long solo responsive website redesign of the SA Ambulance government website.</p>
-            <button class="secondary-button">Take Me There!</button>
+        <div class="main-grid case-study-SAAS">
+            <div class="thumbnail-SAAS ln"></div>
+            <div class="snippet-right">
+                <div class="content">
+                    <h4><span class="clr-p-light">CASE STUDY</span></h4>
+                    <h3> SA Ambulance website redesign<span class="clr-accent">.</span></h3>
+                     <p>3 week long solo responsive website redesign of the SA Ambulance government website.</p>
+                 </div>
+                    <button class="btn-ln">Take me there →</button>
+            </div>
      </div>
     
-       <!-- Card1 End -->
+       <!-- Card1 End --> 
        
        <!-- Card2 Start -->
-       <div class="main-grid-border case-study-left">
-         <h5>CASE STUDY</h5>
-        <h4>Seed Share Mobile App</h4>
-        <p>3 week long group design project. Seed Share is a fresh produce sharing application. </p>
-        <button class="secondary-button">Take Me There!</button>
-        <div></div>
-    </div>
-    <!-- Card2 End -->
+       <div class="main-grid case-study-seedshare">
+           <div class="snippet-left">
+                <div class="content">
+                <h4><span class="clr-p-light">CASE STUDY</span></h4>
+                <h3>Seed Share Mobile App<span class="clr-accent">.</span></h3>
+                 <p>3 week long group design project. Seed Share is a fresh produce sharing application. </p>
+                </div>
+                
+                <button class="btn-ln">Take me there →</button>
+            
+            </div>
+            <div class="thumbnail-seedshare ln"></div>
+        </div>
+        <!-- Card2 End -->
    
-    <!-- Card3 Start -->
-    <div class="main-grid-border case-study-Story-Dogs">
-        <div></div>
-        <h5>CASE STUDY</h5>
-        <h4>Story Dogs Website Redesign</h4>
-        <p>3 week long group non-governmental website redesign. Story Dogs is an organisation that aims to improve the literacy confidence of students through the use of dogs.</p>
-        <button class="secondary-button">Take Me There!</button>
-    </div>
-    <!-- Card3 End -->
-     </section>
-    
+        <!-- Card3 Start -->
+        <div class="main-grid case-study-storydogs">
+            <div class="thumbnail-storydogs ln"></div>
+            <div class="snippet-right">
+                <div class="content">
+                    <h4><span class="clr-p-light">CASE STUDY</span></h4>
+                    <h3> Story Dogs Website Redesign<span class="clr-accent">.</span></h3>
+                    <p>3 week long group non-governmental website redesign. Story Dogs is an organisation that aims to improve the literacy confidence of students through the use of dogs.</p>
+                </div>
+                    <button class="btn-ln">Take me there →</button>
+            </div>
+        </div>
+</section>
+      <!-- CARD 3 End -->
+
+      <!-- CONTACT ME -->
  <section class="main-grid contact-me">
      <h2 class="header-title">Contact Me!</h2>
-     <h7>This doesnt have to end. Email me at <strong>toreight@tpg.com.au</strong> and we can chat about anything.</h7>
-    <button class="primary-button">Contact Me</button>
+     <p>This doesnt have to end. Email me at <span class="tag fill-p-light">toreight@tpg.com.au</span> and we can chat about anything.</p>
+    <button class="btn-primary">Contact Me</button>
     
  </section>
 
- <div class="main-grid footer">
-    
-    <h5>TOREIGH . TILLER</h5>
-    <h5-light> UX / UI Designer</h5-light>
-    <p>toreight@tpg.com.au</p>
 
-    <a href="#"><i class="fa fa-linkedin footer-Linkedin"></i></a>
+<!-- FOOTER -->
+<section class="fill-primary">
+ <div class="footer-grid footer">
+    
+     <!-- <div class="brand"> -->
+        <h4>TOREIGH TILLER 
+        <span class="light"> | UX UI DESIGNER</span></h4>
+        <div class="socials">
+        <p>toreight@tpg.com.au</p>
+        
+        <div class="icons">
+              <a href="#"><i class="fa fa-linkedin footer-linkedin"></i></a>
        
-    <i class="fa fa-behance-square footer-Behance"></i>
-    <ul>
-        <li class="footer-work"><a href="work.html">work</li></a> 
-        <li class="footer-about"><a href="about.html">about</li></a> 
-        <li class="footer-contact"><a href="contact.html">contact</li></a> 
-    </ul>
-    
-</div>
+             <i class="fa fa-behance footer-behance"></i>
+        
+                <i class="fa fa-instagram footer-instagram"></i>
+        </div>
+        </div>
 
+        <ul class="links">
+            <div class="link">
+                <li><a href="index.html">home</a></li>
+            </div>
+            <div class="link">
+                <li><a href="work.html">work</a></li>
+            </div>
+            <div class="link">
+                <li><a href="about.html">about</a></li>
+            </div>
+            <div class="link">
+                <li><a href="contact.html">contact</a></li>
+            </div>
+            <div class="link">
+                <li><a href="#">resume</a></li>
+            </div>
+        </ul>
+        <i class="fa fa-copyright copyright"> copyright 2021</i>
+        <!-- </div> -->
+    </div>
+</section>
+
+</main>
 <a href="#" class="back-to-top"><i class="fa fa-chevron-circle-up back-to-top"></i></a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

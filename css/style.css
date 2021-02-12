@@ -1,19 +1,26 @@
 @font-face{
     font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;700&display=swap');
+    
+
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+}
+
+@import url("./line.css");
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
     --main-padding: 0 12vw;
-
-    --teal: #2D6161;
-    --blue: #9DB6B5;
-    --lpink: #FFD4C1;
-    --pink: #F28482;
-    --yellow: #F6BD60;
-    --charcoal: #1a1a1a; 
-    --darkgrey: #8F8F8F;
+    --text: #1b1b1b;
+    --primary: #356161;
+    --p-light: #9DB6B5;
+    --accent:#F28482;
+    --tertiary: #F6BD60;
 }
 
 @media only screen and (max-width: 560px) {
@@ -22,499 +29,494 @@
    }
 }
 
-html {
-    font-size: 16px;
-}
 
-* { 
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-    font-family:'Roboto', sans-serif;
-    color: #444444;
-}
-
-html, 
-body {
-    height:100%;
-    width:100%;
-    
-    
-}
-
-/* Typography */
-H1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 4.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.2em;
-
-}
-
-H2 {
-    font-family: 'Poppins', sans-serif;
+h1 {
     font-size: 4rem;
-    font-weight: 600;
+    line-height: 5.6rem;
 }
 
-H3 {
-    font-family:'Roboto', sans-serif;
+h2 {
     font-size: 3rem;
-    font-weight:700;
-    text-transform: uppercase;
-
+    line-height: 4rem;
 }
 
-H4 {
-    font-family:'Roboto', sans-serif;
-    font-size: 2.5rem;
-    font-weight:700;
-}
-
-H5 {
-    font-family: 'Poppins', sans-serif;
+h3 {
     font-size: 2rem;
-    font-weight:500;
-    text-transform: uppercase;
+    line-height: 2.4rem;
 }
 
-H5-light {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    font-weight:300;
-    text-transform: uppercase;
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .12rem;
+    line-height: 2rem;
 }
 
-H6 {
-    font-family:'Roboto', sans-serif;
-    font-size: 2rem;
-    font-weight:400;
+.light {
+    font-weight: lighter;
 }
 
-h7 {
-    font-family:'Roboto', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 300;
+/* Colour changes- (for changing colours mid-sentence) */
+.clr-primary {
+    color: var(--primary);
+    
 }
 
-p {
-    font-family:'Roboto', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.5;
-
+.clr-p-light {
+    color: var(--p-light);
 }
 
-p-light {
-    font-family:'Roboto', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 300;
-    line-height: 1.5;
+.clr-accent {
+    color: var(--accent);
 }
 
-
-
-
-/* buttons */
-
-.primary-button {
-    font-size: 1.25rem;
-    background-color: var(--teal);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    color:white;
-   border-radius: 12px;
-   padding: 2% 2%;
-  text-align: center;
-  border: none;
-  transition-duration: 0.4s;
-  
+.clr-tertiary {
+    color: var(--tertiary);
 }
 
-.primary-button:hover {
-    background-color: #4b8a8a;
+/* Background Colour variations */
+
+.fill-primary {
+    background-color: var(--primary);
+}
+
+.fill-p-light {
+    background-color: var(--p-light);
+}
+
+.fill-accent {
+    background-color: var(--accent);
+}
+
+.fill-tertiary {
+    background-color: var(--tertiary);
+}
+
+/* Pill-shape tag */
+
+.tag {
+    border-radius: 24px;
+    padding: 0 .72rem;
+}
+
+/* BUTTON SYSTEM */
+
+button {
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    padding: 0 1rem;
+    transition: 120ms;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Button modifiers */
+
+.btn-primary {
+    background-color: var(--primary);
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    transition-duration: 0.4s;
 }
 
-.button:active {
-    background-color: #4b8a8a;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  
-  }
-
-.secondary-button {
-    font-size: 1.25rem;
-    border: 1px solid var(--teal);
-    background-color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-   color: var(--teal);
-   border-radius: 12px;
-   padding: 2% 2%;
-  text-align: center;
-  transition-duration: 0.4s;
+.btn-primary:hover {
+    background-color: var(--p-light);
 }
 
-.secondary-button:hover {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+.btn-lg {
+    height: 72px;
+    padding: 0 1.5rem;
 }
 
-/* Navigation */
-header {
-    background: white;
-     
+.btn-ln {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
 }
+
+.btn-ln:hover {
+    background-color: var(--p-light);
+    color: white;
+    border-color: var(--p-light);
+}
+
+/* SHADOW ELEVATION */
+
+:root {
+    --ev-1: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    --ev-2: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+    --ev-3: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* NAVIGATION */
 
 nav {
+    
+    min-height: 72px;
+    height: 4vw;
     display: flex;
-    justify-content: space-between;
-    padding: 2% 10% 2% 10%;
     align-items: center;
-    background: white;
-    height: 50px;
-    position: -webkit-sticky;
+    padding: var(--main-padding);
+    border-bottom: 2px solid var(--accent);
     position: sticky;
     top: 0;
-    
+    background-color: white;
+    z-index: 100;
 }
-.nav-item {
+
+nav h3 {
+    font-size: 2vw;
+}
+
+nav a {
     text-decoration: none;
-    padding: 16px;
-    color: var(--charcoal);
-    transition-duration: 0.4s;
+    color: var(--text);
 }
 
-.nav-item:hover {
-    border-bottom: 6px solid var(--pink); 
+nav>* {
+    display: flex;
+
 }
 
-.logo-small{
+nav .brand {
+    flex-grow: 3;
+}
+
+nav .links {
+    flex-grow: 1;
+    justify-content: center;
+    list-style: none;
+}
+
+.link {
+    flex-grow: 1;
+    margin: 0 .8rem;
+}
+
+.link:hover>li>a {
+    color: var(--accent);
+}
+
+.brand-small{
     display: none;
 }
 
 #burger-menu {
     display: none;
 }
-/* lines */
-.ln {
-    border: 2px solid var(--pink);
-    border-top:none;
-    border-left: none;
-    border-right: none;
+
+
+/* MAIN */
+
+main {
+    padding: var(--main-padding);
 }
 
-/* hero section - Home Page*/
+/* GRID */
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+    padding: 12rem 0;
+}
+
 .main-grid {
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: auto;
-    padding: 5% 10%;
+    padding: 9rem 0;
+    
 }
 
-.main-grid-border {
+.footer-grid {
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: auto;
-    margin: 5% 10%;
-    padding: 2%;
-    border-radius: 12px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5rem 0;
 }
 
+/* BACK TO TOP */
 .back-to-top {
     display: none;
     position: fixed;
     font-size: 3rem;
-    color: var(--blue);
+    color: var(--p-light);
     background-color: transparent;
     bottom: 100px;
     right: 50px;
 
 }
 
-.hero-section {
-    background-color: whitesmoke;
-}
 
+/* HEADING SPACING */ 
 .header-title {
     grid-area: 1 / 1 / span 1 / span 12;
-    padding: 0% 0% 3% 0;
+    /* padding: 0% 0% 2% 0; */
     
 }
 
 .header-subtitle {
-    grid-area: 2 / 1 / span 1 / span 6;
-    padding: 0% 0% 5% 0%;
-}
+    grid-area: 2 / 1 / span 1 / span 7;
+    /* padding: 0% 0% 5% 0%; */
+} *
 
 .header-body-text {
-    grid-area: 3 / 1 / span 1 / span 5; 
-    padding: 0% 0% 10% 0%;
+    grid-area: 3 / 1 / span 1 / span 6; 
+    /* padding: 0% 0% 10% 0%; */
 }
 
-#hero-button {
-    padding: 24px 43px;  
-    grid-area: 4 / 1 / span 1 / span 2;
-       
+/* HERO SECTION */
+
+.hero-grid p {
+    padding: 1.2rem 0;
+    font-size: 1.24rem;
+    font-weight: 285;
+    /* width: 50%; */
 }
 
-#li-button {
-    grid-area: 4 / 3 / span 1 / span 1;
+
+.container-contact {
+    grid-area: 4 / 1 / span 1 / span 3;
     display: flex;
-    justify-content: center;
+    margin: 2rem 0;
     align-items: center;
-    font-size: 3rem;
 }
 
-#be-button {
-    grid-area: 4 / 4 / span 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
+.container-contact>* {
+    margin-right: 1.2rem;
 }
 
-.header-Behance {
-    grid-area: 4 / 4 /4/ 4;
-    padding: 10% 0 0 10%;
-}
+/* CASE STUDIES */
 
 
-/* selected work */
 .selected-work {
-    padding: 5% 10% 0 10%;
+    padding: 5% 0;
 }
 
-/* Case Study Right (SAAS) */
-.case-study-SAAS div {
-    background-image: url("../images/SAASredesignthumbnail.jpg");
+/* CASE STUDY 1 - SA AMBULANCE */
+.case-study-SAAS {
+    padding: 1.5rem;
+    min-height: 560px;
     border-radius: 12px;
-    background-position: center;
-    background-repeat: no-repeat;
+    box-shadow: var(--ev-1);
+    transition: 300ms;
+    margin: 0 0 5% 0;
+
+}
+
+.case-study-SAAS:hover {
+    box-shadow: var(--ev-3);
+    transform: scale(1.006);
+}
+
+.thumbnail-SAAS {
+    grid-column: span 6;
+    border-radius: .8rem;
+    background: url("../images/SAASredesignthumbnail.jpg") no-repeat 50% 25%;
     background-size: cover;
-    min-height: 450px;
-    height: 30vh;
-    grid-area: 1 / 7 / span 4 / span 6;
 }
 
-
-.case-study-SAAS h5 {
-    grid-area: 1 / 1 / span 1 / span 5;
-    color: var(--darkgrey);
-}
-.case-study-SAAS h4 {
-    grid-area: 2 / 1 / span 1 / span 5;
-}
-.case-study-SAAS p {
-    grid-area: 3 / 1 / span 1 / span 5;
-}
-.case-study-SAAS button {
-    grid-area: 4 / 1 / span 1 / span 2;
+.snippet-right {
+    grid-column: span 6;
+    padding-left: 3rem;
+    display: flex;
+    flex-flow: column;
+    position: relative;
 }
 
-/* CaseStudy Left (SeedShare) */
+.content>* {
+    margin-bottom: 1rem;
+}
 
-.case-study-left div {
-    background-image: url("../images/SeedShareOnboarding.png");
+.snippet-right button {
+    justify-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 3rem);
+}
+
+/* CASE STUDY 2 */
+
+.case-study-seedshare {
+    padding: 1.5rem;
+    min-height: 560px;
     border-radius: 12px;
-    background-position: center;
-    background-repeat: no-repeat;
+    box-shadow: var(--ev-1);
+    transition: 300ms;
+    margin: 0 0 5% 0;
+}
+
+.case-study-seedshare:hover {
+    box-shadow: var(--ev-3);
+    transform: scale(1.006);
+}
+
+.snippet-left {
+    grid-column: span 6;
+    padding-right: 3rem;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+
+.content>* {
+    margin-bottom: 1rem;
+}
+
+.snippet-left button {
+    justify-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 3rem);
+}
+
+.thumbnail-seedshare {
+    grid-column: span 6;
+    border-radius: .8rem;
+    background: url("../images/SeedShareOnboarding.png") no-repeat 50% 25%;
     background-size: cover;
-    min-height: 450px;
-    height: 30vh;
-    grid-area: 1 / 1 / span 4 / span 6;
+    margin: 0 0 5% 0;
 }
 
-.case-study-left h5 {
-    grid-area: 1 / 8 / span 1 / span 4;
-    color: var(--darkgrey);
+/* CASE STUDY 2 END */
 
-}
-.case-study-left h4 {
-    grid-area: 2 / 8 / span 1 / span 4;
-}
-.case-study-left p {
-    grid-area: 3 / 8 / span 1 / span 4;
-}
-.case-study-left button {
-    grid-area: 4 / 8 / span 1 / span 2;
-}
-
-/* CaseStudy Right (StoryDogs) */
-.case-study-Story-Dogs div {
-    background-image: url("../images/StoryDogs.png");
+/* CASE STUDY 3- STORY DOGS */
+.case-study-storydogs {
+    padding: 1.5rem;
+    min-height: 560px;
     border-radius: 12px;
-    background-position: center;
-    background-repeat: no-repeat;
+    box-shadow: var(--ev-1);
+    transition: 300ms;
+    margin: 0 0 5% 0;
+}
+
+.case-study-storydogs:hover {
+    box-shadow: var(--ev-3);
+    transform: scale(1.006);
+}
+
+.thumbnail-storydogs {
+    grid-column: span 6;
+    border-radius: .8rem;
+    background: url("../images/StoryDogs.png") no-repeat 50% 25%;
     background-size: cover;
-    min-height: 450px;
-    height: 30vh;
-    grid-area: 1 / 7 / span 4 / span 6;
-}
-.case-study-Story-Dogs h5 {
-    grid-area: 1 / 1 / span 1 / span 5;
-    color: var(--darkgrey);
-}
-.case-study-Story-Dogs h4 {
-    grid-area: 2 / 1 / span 1 / span 5;
-}
-.case-study-Story-Dogs p {
-    grid-area: 3 / 1 / span 1 / span 5;
-}
-.case-study-Story-Dogs button {
-    grid-area: 4 / 1 / span 1 / span 2;
 }
 
-
-/* Contact Me */
-
+/* CONTACT ME SECTION */
 
 .contact-me {
     background-color:whitesmoke;
 }
 
 
-.contact-me h7 {
-    grid-area: 2 / 1 / span 3 / span 9;
-    padding: 0 0 5% 0;
+.contact-me p {
+    grid-area: 2 / 1 / span 3 / span 8;
+    padding: 5% 0 5% 0;
+    font-size: 2rem;
+    font-weight: 285;
 
 }
 
 .contact-me button {
     grid-area: 5 / 1 / span 2 / span 2;
-    padding: 10% 10%;
-}
+   
+ } 
    
 
 
-/* Footer */
+/* FOOTER */
+
 .footer{
-    background-color:var(--teal);
-    padding: 2% 10%;
     color: white;
 }
 
-.footer h5 {
-    grid-area: 1 / 1 / span 1 / span 4; 
-    color: white;
-}
-.footer h5-light {
-    grid-area: 2 / 1 / span 1 / span 4;
-    color: white;
-    
+.footer h4 {
+    grid-area: 1 / 1 / span 1 / span 6; 
+
 }
 
 .footer p {
-    grid-area: 3 / 1 / span 1 / span 3;
-    color: white;
     padding: 10% 0;
 }
 
-.footer-Linkedin {
-    grid-area: 4 / 1 / span 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2rem;
+.footer .socials {
+    grid-area: 2 / 1 / span 2 / span 3;
 }
 
-.footer-Behance {
-    grid-area: 4 / 2 / span 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.icons {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    
+}
+
+
+.footer-linkedin { 
+    color: white;
+    padding: 0 10% 0 0;
+    transition: 300ms;
+    
+}
+
+.footer-linkedin:hover {
+    color: var(--accent)
+}
+
+.footer-behance {
+    padding: 0 10% 0 0;
+    transition: 300ms;
+}
+
+.footer-behance:hover {
+    color: var(--accent)
+}
+
+.footer-instagram {
+    padding: 0 10% 0 0;
+    transition: 300ms;
+}
+
+.footer-instagram:hover {
+    color: var(--accent)
+}
+
+.footer .links{
+    grid-area: 1 / 9 / span 4 / span 5;
+    
+}
+
+.footer .copyright {
+    grid-area: 5 / 1 / span 1 / span 2;
+    
 }
 
 .footer ul {
     list-style: none;
-    line-height: 3;
+    line-height: 2.25rem;
     
-    grid-area: 2 / 9 / span 4 / span 2;
-}
+} *
 
 .footer ul li a {
     text-decoration: none;
     color: white;
     
-}
+} 
 
-@media only screen and (min-width: 1224px) and (max-width: 1524px){
-    .header-subtitle {
-        grid-area: 2 / 1 / span 1 / span 8;
-    }
 
-    .headerbodytext {
-        grid-area: 3 / 1 / span 1 /span 7;
-    }
+/* MEDIA QUERIES */
 
-    #hero-button {
-        grid-area: 4 / 1 / span 1 / span 3;
-           
-    }
-    
-    #li-button {
-        grid-area: 4 / 4 / span 1 / span 1;
-        
-    }
-    
-    #be-button {
-        grid-area: 4 / 5 / span 1 / span 1;
-    }
+@media only screen and (min-width:768px) and (max-width: 1224px) {
 
-    .contact-me h7 {
-        grid-area: 2 / 1 / span 3 / span 10;
-
-    }
-}
-
-@media only screen and (min-device-width:768px) and (max-device-width: 1224px) {
-
-    H1 {
-       font-size: 3.5rem; 
-
-    }
-
-    H2 {
-        font-size: 3rem;
-    }
-
-    H3 {
-        font-size: 2rem;
-    }
-
-    H4 {
-        font-size: 2rem;
-    }
-
-    H5 {
-        font-size: 1.5rem;
-    }
-
-    H5-light {
-        font-size: 1.4rem;
-    }
-
-    H6 {
-
-    }
-
-    H7 {
-        font-size: 2rem;
-    }
-
-    .nav-item {
+    .links {
         display: none;
     }
 
-    #logo {
+    .brand {
         display: none;
     }
-
-    .logo-small {
+  
+    .brand-small{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -523,356 +525,276 @@ nav {
     #burger-menu {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; 
     }
-
+    
+    .hero-grid {
+        grid-template-columns: repeat(8,1fr);
+        padding: 12rem 0;
+    }
+    
     .main-grid {
-        display: grid;
         grid-template-columns: repeat(8,1fr);
-    }
-
-    .main-grid-border {
-        display: grid;
-        grid-template-columns: repeat(8,1fr);
-    }
-
-    .header-subtitle {
-        grid-area: 2 / 1 / span 1 / span 8;
-        line-height: 1.2em;
-    }
-
-    .header-body-text {
-        grid-area: 3 / 1 / span 1 / span 6;
-        line-height: 1.2em;
-    }
-
-   
-    #li-button {
-        font-size: 2rem;
-    }
-
-    #be-button {
-        font-size: 2rem;
-    }
-
-    /* SAAS Card */
-
-    .case-study-SAAS div {
-        grid-area: 1 / 1 / span 4 / span 8;
-    }
-
-    .case-study-SAAS h5  {
-        grid-area: 7 / 1 / span 1 / span 8;
-        padding: 2% 0 2% 0;
-    }
-
-    .case-study-SAAS h5 {
-        grid-area: 7 / 1 / span 1 / span 8;
-        padding: 2% 0 2% 0;
-    }
-
-    .case-study-SAAS h4 {
-        grid-area: 8 / 1 / span 1 / span 8;
-        padding: 0 0 2% 0;
-    }
-
-    .case-study-SAAS p  {
-        grid-area: 9 / 1 / span 1 / span 8;
-        padding: 0 0 5% 0;
-    }
-    .case-study-SAAS button  {
-        grid-area: 10 / 1 / span 1 / span 2;      
-        }   
-
-    /* SeedShare Card */
-    .case-study-left div {
-        grid-area: 1 / 1 / span 4 / span 8;
-    }
-
-     .case-study-left h5 {
-        grid-area: 7 / 1 / span 1 / span 8;
-        padding: 2% 0 2% 0;
-    }
-
-     .case-study-left h5 {
-        grid-area: 7 / 1 / span 1 / span 8;
-        padding: 2% 0 2% 0;
-    }
-
-    .case-study-left h4 {
-        grid-area: 8 / 1 / span 1 / span 8;
-        padding: 0 0 2% 0;
-    }
-
-    .case-study-left p {
-        grid-area: 9 / 1 / span 1 / span 8;
-        padding: 0 0 5% 0;
-    }
-   .case-study-left button {
-        grid-area: 10 / 1 / span 1 / span 2;
+        padding: 1rem 0;
         
     }
-   
-        /* StoryDogs Card */
-    .case-study-Story-Dogs div{
-        grid-area: 1 / 1 / span 4 / span 8;
+    
+    .footer-grid {
+        grid-template-columns: repeat(8,1fr);
+        padding: 4rem 0;
     }
 
-    .case-study-Story-Dogs h5 {
-        grid-area: 7 / 1 / span 1 / span 8;
-        padding: 2% 0 2% 0;
+    /* CASE STUDIES */
+    /* CASE STUDY 1 -SAAS*/
+    .case-study-SAAS {
+        padding: 1.5rem;
+        min-height: 560px;
+       
     }
-     .case-study-Story-Dogs h5 {
-        grid-area: 7 / 1 / span 1 / span 8;
-        padding: 2% 0 2% 0;
-    }
-     .case-study-Story-Dogs h4 {
-        grid-area: 8 / 1 / span 1 / span 8;
-        padding: 0 0 2% 0;
-    }
-    .case-study-Story-Dogs p{
-        grid-area: 9 / 1 / span 1 / span 8;
-        padding: 0 0 5% 0;
-    }
-    .case-study-Story-Dogs button  {
-        grid-area: 10 / 1 / span 1 / span 2;
+    
+    .thumbnail-SAAS {
+        grid-column: span 8;
+        min-height: 35rem;
         
     }
+    
+    .snippet-right {
+        grid-column: span 8;
+        padding: 2rem;
+    }
 
+    .content>* {
+        margin-bottom: 2rem ;
+    }
+    
+
+    /* CASE STUDY 2- SEEDSHARE */
+    
+    .case-study-seedshare {
+        padding: 1.5rem;
+        min-height: 560px;  
+    }
+     
+    .thumbnail-seedshare {
+        grid-column: span 8;
+        grid-row-start: 1;
+        min-height: 35rem;
+      
+    }
+
+    .snippet-left {
+        grid-column: span 8;
+        padding: 2rem;
+    }
+    
+    .content>* {
+        margin-bottom: 2rem;
+    }
+    
+    /* CASE STUDY 3 - STORY DOGS */
+    .case-study-storydogs {
+        padding: 1.5rem;
+        min-height: 560px;
+       
+    }
+
+    .thumbnail-storydogs {
+        grid-column: span 8;
+        min-height: 35rem;
+    }
+
+    /* FOOTER */
+    .footer h4 {
+        grid-area: 1 / 1 / span 2 / span 3; 
+    
+    }
+
+    .footer .socials {
+        grid-area: 3 / 1 / span 2 / span 3;
+    }
+
+    .footer .links{
+        grid-area: 1 / 7 / span 1 / span 5;
+    }
+
+  
+    .footer .copyright {
+    grid-area: 5 / 1 / span 1 / span 2;
+    padding: 10% 0 0 0;
+    }
 }
 
 @media only screen and (max-width: 767px) and (min-device-width:320px) {
-    H1 {
-        font-size: 2.25rem; 
- 
-     }
- 
-     H2 {
-         font-size: 1.75rem;
-     }
- 
-     H3 {
-         font-size: 1.45rem;
-     }
- 
-     H4 {
-         font-size: 1.3rem;
-     }
- 
-     H5 {
-         font-size: 1.15rem;
-     }
- 
-     H5-light {
-         font-size: 1.15rem;
-     }
- 
-     H6 {
- 
-     }
- 
-     H7 {
-         font-size: 1.5rem;
-     }
-
-     p {
-        font-size: 1rem;
-     }
-
-     p-light {
-        font-size: 1rem;
-     }
-     
-
-    .primary-button  .secondary-button{
-        font-size: 1rem;
+    h1 {
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+    }
     
+    h2 {
+        font-size: 1.75rem;
+        line-height: 4rem;
     }
-
-     nav{
-        padding: 2% 5% 2% 5%;
-     }
-
-     .nav-item {
-         display: none;
-     }
- 
-     #logo {
-         display: none;
-     }
- 
-     .logo-small {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-     }
- 
-     #burger-menu {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-     }
- 
-
-
-     .main-grid {
-         display: grid;
-         grid-template-columns: repeat(4,1fr);
-         padding: 5% 5%;
-     }
- 
-     .main-grid-border {
-         display: grid;
-         grid-template-columns: repeat(4,1fr);
-         margin: 5% 5%;
- 
-     }
-
-     .header-title {
-        grid-area: 1 / 1 / span 1 / span 4;
-        
-     }
- 
-     .header-subtitle {
-         grid-area: 2 / 1 / span 1 / span 4;
-         line-height: 1.2em;
-         
-     }
- 
-     .header-body-text {
-         grid-area: 3 / 1 / span 1 / span 4;
-         line-height: 1.2em;
-     }
- 
-    #hero-button {
-        padding: 10% 5%;  
-    }
-     #li-button {
-        font-size: 2rem;
-    }
-
-    #be-button {
-        font-size: 2rem;
-    }
-
- 
-     /* SAAS Card */
- 
-     .case-study-SAAS div {
-         grid-area: 1 / 1 / span 4 / span 4;
-         min-height: 200px;
-        height: 30vh;
-     }
- 
-     .case-study-SAAS h5  {
-         grid-area: 7 / 1 / span 1 / span 4;
-         padding: 2% 0 2% 0;
-     }
- 
-     .case-study-SAAS h5 {
-         grid-area: 7 / 1 / span 1 / span 4;
-         padding: 2% 0 2% 0;
-     }
- 
-     .case-study-SAAS h4 {
-         grid-area: 8 / 1 / span 1 / span 4;
-         padding: 0 0 2% 0;
-     }
- 
-     .case-study-SAAS p  {
-         grid-area: 9 / 1 / span 1 / span 4;
-         padding: 0 0 5% 0;
-     }
-     .case-study-SAAS button  {
-         grid-area: 10 / 1 / span 1 / span 4; 
-         padding: 5% 2%;  
-         }   
- 
-     /* SeedShare Card */
-     .case-study-left div {
-         grid-area: 1 / 1 / span 4 / span 4;
-         min-height: 200px;
-        height: 30vh;
-     }
- 
-      .case-study-left h5 {
-         grid-area: 7 / 1 / span 1 / span 4;
-         padding: 2% 0 2% 0;
-     }
- 
-      .case-study-left h5 {
-         grid-area: 7 / 1 / span 1 / span 4;
-         padding: 2% 0 2% 0;
-     }
- 
-     .case-study-left h4 {
-         grid-area: 8 / 1 / span 1 / span 4;
-         padding: 0 0 2% 0;
-     }
- 
-     .case-study-left p {
-         grid-area: 9 / 1 / span 1 / span 4;
-         padding: 0 0 5% 0;
-     }
-    .case-study-left button {
-         grid-area: 10 / 1 / span 1 / span 4;
-         padding: 5% 2%;  
-     }
     
-         /* StoryDogs Card */
-     .case-study-Story-Dogs div{
-         grid-area: 1 / 1 / span 4 / span 4;
-         min-height: 200px;
-        height: 30vh;
-     }
- 
-     .case-study-Story-Dogs h5 {
-         grid-area: 7 / 1 / span 1 / span 4;
-         padding: 2% 0 2% 0;
-     }
-      .case-study-Story-Dogs h5 {
-         grid-area: 7 / 1 / span 1 / span 4;
-         padding: 2% 0 2% 0;
-     }
-      .case-study-Story-Dogs h4 {
-         grid-area: 8 / 1 / span 1 / span 4;
-         padding: 0 0 2% 0;
-     }
-     .case-study-Story-Dogs p{
-         grid-area: 9 / 1 / span 1 / span 4;
-         padding: 0 0 5% 0;
-     }
-     .case-study-Story-Dogs button  {
-         grid-area: 10 / 1 / span 1 / span 4;
-         padding: 5% 2%;  
-     }
- 
- /*footer  */
- .footer p {
-    grid-area: 3 / 1 / span 1 / span 3;
-    padding: 5% 0;
- }
+    h3 {
+        font-size: 1.45rem;
+        line-height: 1.9rem;
+    }
+    
+    h4 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        letter-spacing: .12rem;
+        line-height: 1.74rem;
+    }
+    
+    .links {
+        display: none;
+    }
 
-.footer-Linkedin {
-     font-size: 2rem;
-     grid-area: 8 / 1 / span 1 / span 1;
-     padding: 5% 0%;
- }
-
-.footer-Behance {
-    font-size: 2rem;
-    grid-area: 8 / 2 / span 1 / span 1;
-    padding: 5% 0%;
- }
-
- .footer ul {
+    .brand {
+        display: none;
+    }
   
-    grid-area: 4 / 1 / span 4 / span 2;
+    .brand-small{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    
+    .hero-grid {
+        grid-template-columns: repeat(4,1fr);
+        padding: 6rem 0 3rem 0;
+    }
+    
+    .main-grid {
+        grid-template-columns: repeat(4,1fr);
+        padding: 0rem 0;
+        
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(4,1fr);
+        padding: 4rem 0;
+    }
+
+    /* HERO SECTION */
+    .header-subtitle {
+        padding: 5% 0% 0% 0%;
+    } *
+    
+    .hero-grid p {
+        font-size: 1rem;
+    }
+
+    .container-contact {
+        grid-area: 4 / 1 / span 1 / span 4;
+       
+    }
+
+    /* CASE STUDIES */
+    /* CASE STUDY 1 -SAAS*/
+    .case-study-SAAS {
+        padding: .5rem;
+        min-height: 560px;
+       
+    }
+    
+    .thumbnail-SAAS {
+        grid-column: span 4;
+        min-height: 16.25rem;
+        
+    }
+    
+    .snippet-right {
+        grid-column: span 4;
+        padding: 1rem .5rem;
+    }
+
+    .content>* {
+        margin-bottom: 3rem ;
+    }
+
+
+
+    /* CASE STUDY 2- SEEDSHARE */
+    
+    .case-study-seedshare {
+        padding: .5rem;
+        min-height: 560px;  
+    }
+     
+    .thumbnail-seedshare {
+        grid-column: span 4;
+        grid-row-start: 1;
+        min-height: 16.25rem;
+      
+    }
+
+    .snippet-left {
+        grid-column: span 4;
+        padding: 1rem .5rem;
+    }
+    
+    .content>* {
+        margin-bottom: 2rem;
+    }
+    
+    /* CASE STUDY 3 - STORY DOGS */
+    .case-study-storydogs {
+        padding: .5rem;
+        min-height: 560px;  
+    }
+
+    .thumbnail-storydogs {
+        grid-column: span 4;
+        min-height: 16.25rem;
+    }
+
+    /* CONTACT Me */
+    .contact-me {
+        padding: 7% 0;
+    }
+    
+    .contact-me p {
+        grid-area: 2 / 1 / span 3 / span 4;
+        padding: 5% 0 7% 0;
+        font-size: 1.25rem;
+        font-weight: 285;
+    
+    }
+    
+    .contact-me button {
+        grid-area: 5 / 1 / span 2 / span 3;
+       
+     } 
+
+
+    /* FOOTER */
+    .footer h4 {
+        grid-area: 1 / 1 / span 2 / span 3; 
+    
+    }
+
+    .footer .socials {
+        grid-area: 3 / 1 / span 2 / span 4;
+    }
+
+    .footer .links{
+        grid-area: 6 / 1 / span 4 / span 4;
+    }
+
+  
+    .footer .copyright {
+    grid-area: 10 / 1 / span 1 / span 2;
+    padding: 10% 0 0 0;
+    }
 }
-}
-
-
-
 
 
 
